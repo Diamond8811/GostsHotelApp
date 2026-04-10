@@ -1,0 +1,34 @@
+﻿<Page x:Class="GostsHotelApp.Pages.EvictionsPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:GostsHotelApp.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Выселение нарушителей" Background="#0F0F0F">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="🧹 Выселение слишком шумных призраков" FontSize="28" FontWeight="Bold" Foreground="#708090" Margin="0,0,0,20"/>
+        <TextBlock Grid.Row="1" Text="Активные бронирования:" FontSize="16" Margin="0,0,0,5"/>
+        <DataGrid x:Name="dgActiveBookings" Grid.Row="2" AutoGenerateColumns="False" IsReadOnly="True" SelectionMode="Single">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Призрак" Binding="{Binding Ghosts.Name}"/>
+                <DataGridTextColumn Header="Номер" Binding="{Binding Rooms.RoomNumber}"/>
+                <DataGridTextColumn Header="Заезд" Binding="{Binding CheckInDate, StringFormat=d}"/>
+                <DataGridTextColumn Header="Выезд" Binding="{Binding CheckOutDate, StringFormat=d}"/>
+                <DataGridTemplateColumn Header="Действие">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Content="Выселить" Tag="{Binding BookingID}" Click="Evict_Click" Background="#8B0000"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Page>

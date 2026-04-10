@@ -1,0 +1,32 @@
+﻿<Window x:Class="GostsHotelApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GostsHotelApp"
+        mc:Ignorable="d"
+        Title="Отель для призраков" Height="700" Width="1100"
+        WindowStartupLocation="CenterScreen">
+    <DockPanel>
+        <Menu DockPanel.Dock="Top" Background="#1A1A1A" Foreground="#E0E0E0">
+            <MenuItem Header="🏨 Отель">
+                <MenuItem Header="Каталог номеров" Click="Catalog_Click"/>
+                <MenuItem x:Name="myBookingsMenuItem" Header="Мои бронирования" Click="MyBookings_Click"/>
+                <Separator/>
+                <MenuItem Header="Профиль" Click="Profile_Click"/>
+                <MenuItem Header="Выйти" Click="Logout_Click"/>
+            </MenuItem>
+            <MenuItem x:Name="adminMenu" Header="🔧 Администрирование" Visibility="Collapsed">
+                <MenuItem Header="Номера и типы" Click="AdminRooms_Click"/>
+                <MenuItem Header="Услуги" Click="AdminServices_Click"/>
+                <MenuItem Header="Пользователи" Click="AdminUsers_Click"/>
+            </MenuItem>
+            <MenuItem x:Name="exorcistMenu" Header="🧹 Экзорцист" Visibility="Collapsed">
+                <MenuItem Header="Выселение нарушителей" Click="Evictions_Click"/>
+            </MenuItem>
+        </Menu>
+        <Border Background="#0F0F0F" Padding="10">
+            <Frame x:Name="ContentFrame" NavigationUIVisibility="Hidden"/>
+        </Border>
+    </DockPanel>
+</Window>

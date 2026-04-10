@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="7a2ec2ee11d446c6a784662ce020d7a5" Name="Diagram1">
+        <EntityTypeShape EntityType="HotelGostsDbModel.Bookings" Width="1.5" PointX="3" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelGostsDbModel.BookingServices" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelGostsDbModel.Evictions" Width="1.5" PointX="11.25" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelGostsDbModel.Ghosts" Width="1.5" PointX="0.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelGostsDbModel.Logs" Width="1.5" PointX="8.25" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelGostsDbModel.Roles" Width="1.5" PointX="3.75" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelGostsDbModel.Rooms" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelGostsDbModel.RoomTypes" Width="1.5" PointX="1.5" PointY="9" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelGostsDbModel.Services" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelGostsDbModel.sysdiagrams" Width="1.5" PointX="7.75" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="HotelGostsDbModel.Users" Width="1.5" PointX="6" PointY="4.5" IsExpanded="true" />
+        <AssociationConnector Association="HotelGostsDbModel.FK_Bookings_Ghosts" ManuallyRouted="false" />
+        <AssociationConnector Association="HotelGostsDbModel.FK_Bookings_Rooms" ManuallyRouted="false" />
+        <AssociationConnector Association="HotelGostsDbModel.FK_BookingServices_Bookings" ManuallyRouted="false" />
+        <AssociationConnector Association="HotelGostsDbModel.FK_Evictions_Bookings" ManuallyRouted="false" />
+        <AssociationConnector Association="HotelGostsDbModel.FK_BookingServices_Services" ManuallyRouted="false" />
+        <AssociationConnector Association="HotelGostsDbModel.FK_Evictions_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="HotelGostsDbModel.FK_Users_Ghosts" ManuallyRouted="false" />
+        <AssociationConnector Association="HotelGostsDbModel.FK_Logs_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="HotelGostsDbModel.FK_Users_Roles" ManuallyRouted="false" />
+        <AssociationConnector Association="HotelGostsDbModel.FK_Rooms_RoomTypes" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,48 @@
+﻿<Window x:Class="GostsHotelApp.Windows.RegisterWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GostsHotelApp.Windows"
+        mc:Ignorable="d"
+        Title="Регистрация нового призрака" Height="500" Width="450"
+        WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Grid Margin="15">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBlock Text="Новый гость – заполните данные" FontSize="20" Margin="0,0,0,15" Foreground="#708090" HorizontalAlignment="Center"/>
+
+        <TextBlock Grid.Row="1" Text="Имя призрака:"/>
+        <TextBox x:Name="txtGhostName" Grid.Row="2" Margin="0,5"/>
+
+        <TextBlock Grid.Row="3" Text="Год упокоения:"/>
+        <TextBox x:Name="txtYear" Grid.Row="4" Margin="0,5"/>
+
+        <TextBlock Grid.Row="5" Text="Уровень прозрачности (0-100):"/>
+        <TextBox x:Name="txtTransparency" Grid.Row="6" Margin="0,5"/>
+
+        <TextBlock Grid.Row="7" Text="Логин для входа:"/>
+        <TextBox x:Name="txtLogin" Grid.Row="8" Margin="0,5"/>
+
+        <TextBlock Grid.Row="9" Text="Пароль:"/>
+        <PasswordBox x:Name="txtPassword" Grid.Row="10" Margin="0,5"/>
+
+        <StackPanel Grid.Row="11" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,20">
+            <Button x:Name="btnRegister" Content="Зарегистрироваться" Width="150" Click="BtnRegister_Click"/>
+            <Button x:Name="btnCancel" Content="Отмена" Width="100" Click="BtnCancel_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
